@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.app{
+       
+    .container{
+        
+        // HEADER
+        .header-container{
+            height: 80px;
+            background-color: aquamarine;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo{
+                padding: 10px;
+                img{
+                    width: 300px;
+                }
+            }
+            .nav-links{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 30px;
+                padding-right: 50px;
+
+                .link{
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        //FOOTER
+        .footer-container{
+            bottom: 0;
+            height: 40px;
+            background-color: rgb(3, 231, 155);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
