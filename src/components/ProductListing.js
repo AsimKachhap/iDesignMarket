@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import {useSelector} from "react-redux";
-import Product from "./SingleProduct";
+import {useDispatch, useSelector} from "react-redux";
+import ProductComponent from "./ProductComponent";
+import { getProducts } from "../actions/productActions";
 
 const ProductListing = () => {
     const products = useSelector((state)=>state);
+    const dispatch = useDispatch();
 
     const fetchProducts = async()=>{
         const response = await axios
@@ -12,15 +14,16 @@ const ProductListing = () => {
             .catch((err)=>{
                 console.log("Error", err);
             });
-        console.log(response.data);
+        dispatch(getProducts(response.data));
     }
      
     useEffect(()=>{
         fetchProducts()
     }, []);
+    console.log(products);
     
   return (
-    <Product/>
+    <ProductComponent/>
   )
 }
 
