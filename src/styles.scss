@@ -46,5 +46,48 @@
             align-items: center;
             justify-content: center;
         }
+
+
+        //PRODUCT PAGE
+        .product-page-container{
+            min-height:800px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .side-section{
+                flex: 1;
+                background-color: coral;
+            }
+
+            .product-section{
+                flex: 3;
+                background-color: bisque;
+            }
+
+
+        }
+
+
+        //SINGLE PRODUCT STYLING
+        .product-container{
+            display:flex;
+            height:200px;
+            justify-content: center;
+
+            .thumbnail{
+                flex:2.5;
+                background-color: greenyellow;
+                img{
+                    height:100%;
+                    width: 150%;
+                    object-fit: scale-down;
+                }
+            }
+            .display-information{
+                flex:7;
+                background-color: indianred;
+            }
+        }
     }
 }
