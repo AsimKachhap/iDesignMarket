@@ -4,7 +4,7 @@ import { GET_PRODUCT, GET_PRODUCTS } from "../constatnts/actionTypes"
 export const getProducts = (products)=>{
     return{
         type: GET_PRODUCTS,
-        payload: products
+        payload: products,
     };
 };
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import {FaShoppingCart} from 'react-icons/fa';
 
 import Logo from '../images/iDesignLogo.png'
 import Cart from './Cart';
@@ -11,7 +12,7 @@ const Header = () => {
       <div className="logo"> <img src={Logo} alt="Logo"  /> </div>
       <div className="nav-links">
         <Link to="/products" className="link" element={<Products/>} >Products</Link>
-        <Link to="/cart" className="link" element={<Cart/>} >Cart</Link>
+        <Link to="/cart" className="link" element={<Cart/>} ><FaShoppingCart/></Link>
       </div>
     </div>
   )
